@@ -1,10 +1,10 @@
 export default {
-  name: 'header',
+  name: 'manage',
   components: {},
   props: [],
   data () {
     return {
-
+      
     }
   },
   computed: {

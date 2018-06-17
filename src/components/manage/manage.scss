@@ -1,0 +1,16 @@
+.manage {
+  .card {
+    margin: 5px;
+    cursor: pointer;
+    .bg-img {
+      .icon {
+        font-size: 20vw;
+      }
+    }
+    &:hover {
+      .bg-img .icon {
+        font-size: 21vw;
+      }
+    }
+  }
+}
