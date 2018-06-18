@@ -1,5 +1,47 @@
 
 <section class="home">
   <h1>home Component</h1>
+  <v-stepper v-model="e1" v-show="!done">
+    <v-stepper-header>
+      <v-stepper-step :complete="e1 > 1" step="1">¿Quién soy?</v-stepper-step>
+        <v-divider></v-divider>
+      <v-stepper-step :complete="e1 > 2" step="2">¿Qué quiero?</v-stepper-step>
+        <v-divider></v-divider>
+      <v-stepper-step step="3">¿Todo OK?</v-stepper-step>
+    </v-stepper-header>
+
+    <v-stepper-items>
+      <v-stepper-content step="1">
+        <v-card color="grey lighten-3" class="mb-5" height="200px">
+          <h1>¿Quién soy?</h1>
+        </v-card>
+        <v-btn color="blue" @click.native="e1 = 2">Continue</v-btn>
+        <v-btn flat @click.native="e1 = 1">Cancel</v-btn>
+      </v-stepper-content>
+
+      <v-stepper-content step="2">
+        <v-card color="grey lighten-2" class="mb-5" height="200px">
+          <h1>¿Qué quiero?</h1>
+        </v-card>
+        <v-btn color="blue" @click.native="e1 = 3">Continue</v-btn>
+        <v-btn flat @click.native="e1 = 1">Cancel</v-btn>
+      </v-stepper-content>
+
+      <v-stepper-content step="3">
+        <v-card color="grey lighten-1" class="mb-5" height="200px">
+          <h1>¿Está todo OK?</h1>
+          <div>
+            
+          </div>
+        </v-card>
+        <v-btn color="green lighten-2" @click.native="e1 = 1, done = true">Complete</v-btn>
+        <v-btn flat @click.native="e1 = 1">Cancel</v-btn>
+      </v-stepper-content>
+    </v-stepper-items>
+  </v-stepper>
+
+  <div v-show="done">
+    READY
+  </div>
 </section>
 

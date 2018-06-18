@@ -49,4 +49,7 @@ a {
   color: #42b983;
 }
 
+.divider {
+  background-color: lightgray;
+}
 </style>
