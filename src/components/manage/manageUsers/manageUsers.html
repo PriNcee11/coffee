@@ -1,6 +1,23 @@
 
 <section class="manage-users">
   <h1>manage-users Component</h1>
+
+  <v-text-field
+    name="userName"
+    v-model="user.name"
+    label="Name"
+    single-line
+  ></v-text-field>
+
+  {{ user.name }}
+
+  <v-btn @click="insertNew()">new user</v-btn>
   <v-btn @click="$router.go(-1)"><v-icon>arrow_back_ios</v-icon> Back</v-btn>
+
+  <v-snackbar color="snackbar.color" v-model="snackbar.show">
+    {{ snackbar.text }}
+    <v-btn dark flat @click.native="snackbar = false"><v-icon>close</v-icon></v-btn>
+  </v-snackbar>
+
 </section>
 

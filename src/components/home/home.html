@@ -12,8 +12,15 @@
 
     <v-stepper-items>
       <v-stepper-content step="1">
-        <v-card color="grey lighten-3" class="mb-5" height="200px">
+        <v-card color="grey lighten-3" height="200px">
           <h1>¿Quién soy?</h1>
+          <v-container fluid>
+            <v-layout row wrap>
+              <v-flex xs6>
+                <user-selector></user-selector>
+              </v-flex>
+            </v-layout>
+          </v-container>
         </v-card>
         <v-btn color="blue" @click.native="e1 = 2">Continue</v-btn>
         <v-btn flat @click.native="e1 = 1">Cancel</v-btn>
@@ -31,7 +38,7 @@
         <v-card color="grey lighten-1" class="mb-5" height="200px">
           <h1>¿Está todo OK?</h1>
           <div>
-            
+
           </div>
         </v-card>
         <v-btn color="green lighten-2" @click.native="e1 = 1, done = true">Complete</v-btn>
