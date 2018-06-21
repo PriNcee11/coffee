@@ -7,11 +7,13 @@
 
 <script>
 import Toolbar from "./components/toolbar";
+import store from './vuex/store'
 
 export default {
   components: {
-    toolbar: Toolbar
+    toolbar: Toolbar,
   },
+  store,
   name: 'app',
   data () {
     return {
